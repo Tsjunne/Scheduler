@@ -26,7 +26,7 @@ namespace Scheduler
                 JobName = context.JobDetail.Key.Name,
                 Parameters = context.JobDetail.JobDataMap.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 ScheduledTime = context.ScheduledFireTimeUtc.Value,
-                DueTime = context.NextFireTimeUtc.Value
+                DueTime = context.NextFireTimeUtc
             };
             
             _messageSession.Send(context.JobDetail.Key.Group, command).Wait();

@@ -12,6 +12,6 @@ namespace Shared
         public string JobName { get; set; }
         public Dictionary<string, string> Parameters { get; set; }
         public DateTimeOffset ScheduledTime { get; set; }
-        public DateTimeOffset DueTime { get; set; }
+        public DateTimeOffset? DueTime { get; set; }
     }
 }

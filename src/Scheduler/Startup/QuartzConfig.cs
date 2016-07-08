@@ -21,9 +21,11 @@ namespace Scheduler.Startup
                 {"quartz.dataSource.myDS.connectionString", ConfigurationManager.ConnectionStrings["Scheduler"].ConnectionString},
                 {"quartz.dataSource.myDS.provider", "SqlServer-20"},
                 {"quartz.jobStore.clustered", "true"},
+                {"quartz.scheduler.instanceName", "My Job Scheduler"},
                 {"quartz.scheduler.instanceId", "AUTO"}
-            };
-            
+            }; 
+
+
              ISchedulerFactory schedFact = new StdSchedulerFactory(properties);
             
             // get a scheduler

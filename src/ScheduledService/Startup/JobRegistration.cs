@@ -15,16 +15,16 @@ namespace ScheduledService.Startup
         {
             var registration1 = new Shared.JobRegistration
             {
-                JobName = "RunEvery5Seconds",
-                Parameters = new Dictionary<string, string> {{"someParameter", "aParameter"}},
-                Interval = TimeSpan.FromSeconds(5)
+                JobName = "RunOnCronSchedule",
+                Parameters = new Dictionary<string, string> { { "someParameter", "aParameter" } },
+                CronExpression = "0/10 * * * * ? *"
             };
-            
+
             var registration2 = new Shared.JobRegistration
             {
                 JobName = "RunEveryMinute",
-                Parameters = new Dictionary<string, string> { { "someParameter", "aParameter" } },
-                CronExpression = "0 0/1 * 1/1 * ? *"
+                Parameters = new Dictionary<string, string> {{"someParameter", "aParameter"}},
+                Interval = TimeSpan.FromMinutes(1)
             };
 
             var command = new RegisterJobExecutionScheduleCommand

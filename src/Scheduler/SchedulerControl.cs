@@ -9,7 +9,6 @@ namespace Scheduler
     public class SchedulerControl : IWantToRunWhenEndpointStartsAndStops
     {
         private readonly IScheduler _scheduler;
-        private readonly IWindsorContainer _container;
 
         public SchedulerControl(IScheduler scheduler)
         {
