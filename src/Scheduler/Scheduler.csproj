@@ -119,7 +119,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Constants.cs" />
     <Compile Include="SendCommandJob.cs" />
     <Compile Include="Startup\Bootstrapper.cs" />
     <Compile Include="Startup\EndpointConfig.cs" />

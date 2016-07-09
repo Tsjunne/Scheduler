@@ -23,10 +23,9 @@ namespace Scheduler.Startup
                 {"quartz.jobStore.clustered", "true"},
                 {"quartz.scheduler.instanceName", "My Job Scheduler"},
                 {"quartz.scheduler.instanceId", "AUTO"}
-            }; 
+            };
 
-
-             ISchedulerFactory schedFact = new StdSchedulerFactory(properties);
+            ISchedulerFactory schedFact = new StdSchedulerFactory(properties);
             
             // get a scheduler
             var scheduler = schedFact.GetScheduler();
